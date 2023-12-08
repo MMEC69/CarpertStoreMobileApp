@@ -19,7 +19,7 @@
     </style>
 
     <style name="blueButtonStyle">
-        <item name="android:background">@drawable/blue_background</item>
+        <item name="android:background">@color/g_light_blue</item>
         <item name="android:fontFamily">@font/poppins_thin</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/h2TextSize</item>
@@ -27,7 +27,7 @@
     </style>
 
     <style name="redButtonStyle">
-        <item name="android:backgroundTint">@color/g_red</item>
+        <item name="android:backgroundTint">@color/g_light_red</item>
         <item name="android:fontFamily">@font/poppins_thin</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/h2TextSize</item>
