@@ -4,6 +4,8 @@ plugins {
     id("com.google.gms.google-services")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -96,6 +98,10 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation ("com.github.shuhart:stepview:1.5.1")
 
 
 

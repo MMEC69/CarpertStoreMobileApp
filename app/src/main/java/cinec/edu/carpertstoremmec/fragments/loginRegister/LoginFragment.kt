@@ -11,6 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import cinec.edu.carpertstoremmec.R
+import cinec.edu.carpertstoremmec.activities.RequiredFutureChanges
 import cinec.edu.carpertstoremmec.activities.ShoppingActivity
 import cinec.edu.carpertstoremmec.databinding.FragmentLoginBinding
 import cinec.edu.carpertstoremmec.dialog.setupBottomSheetDialog
@@ -24,6 +25,8 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
     private lateinit var binding: FragmentLoginBinding
     private val viewModel by viewModels<LoginViewModel>()
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,6 +39,8 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         binding.noAccount.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
@@ -44,6 +49,8 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
             buttonLogin.setOnClickListener {
                 val email = edEmailLogin.text.toString().trim()
                 val password = password.text.toString()
+
+
                 viewModel.login(email, password)
             }
         }
@@ -76,6 +83,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
 
         lifecycleScope.launchWhenStarted {
             viewModel.login.collect{
+
                 when(it){
                     is Resource.Loading -> {
                         //binding.buttonLogin.startAnimation()
@@ -99,5 +107,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
                 }
             }
         }
+
+
     }
 }
